@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://luxeechoreplicas.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://luxeechoreplicas.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxeechoreplicas.com/en/"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Catalog -->
+  <url>
+    <loc>https://luxeechoreplicas.com/catalog.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://luxeechoreplicas.com/catalog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxeechoreplicas.com/en/catalog.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Como Comprar / How to Buy -->
+  <url>
+    <loc>https://luxeechoreplicas.com/como-comprar.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://luxeechoreplicas.com/como-comprar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxeechoreplicas.com/en/how-to-buy.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://luxeechoreplicas.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://luxeechoreplicas.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxeechoreplicas.com/en/contact.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://luxeechoreplicas.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://luxeechoreplicas.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxeechoreplicas.com/en/about.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://luxeechoreplicas.com/legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://luxeechoreplicas.com/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luxeechoreplicas.com/en/legal.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

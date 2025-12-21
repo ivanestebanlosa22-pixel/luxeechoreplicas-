@@ -1,0 +1,29 @@
+# Robots.txt for LuxeEchoReplicas
+# https://luxeechoreplicas.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://luxeechoreplicas.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block unnecessary files
+Disallow: /*.zip$
+Disallow: /js/products.js
+
+# Allow all main pages
+Allow: /index.html
+Allow: /catalog.html
+Allow: /contact.html
+Allow: /about.html
+Allow: /como-comprar.html
+Allow: /legal.html
+Allow: /en/
+
+# Allow CSS and JS for rendering
+Allow: /css/
+Allow: /js/script-premium.js
+Allow: /images/

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | LuxeEchoReplicas - Soporte y Comunidad</title>
+    <meta name="description" content="Contacta con LuxeEchoReplicas. Unete a nuestra comunidad en Discord, TikTok y Reddit. Soporte rapido y atencion personalizada.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://luxeechoreplicas.com/contact.html">
+    <link rel="alternate" hreflang="es" href="https://luxeechoreplicas.com/contact.html">
+    <link rel="alternate" hreflang="en" href="https://luxeechoreplicas.com/en/contact.html">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="stylesheet" href="css/styles-premium.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .contact-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        .contact-hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        .contact-card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+        .contact-card-icon.discord { background: linear-gradient(135deg, #5865F2, #7289DA); color: white; }
+        .contact-card-icon.tiktok { background: linear-gradient(135deg, #000, #25F4EE); color: white; }
+        .contact-card-icon.reddit { background: linear-gradient(135deg, #FF4500, #FF5700); color: white; }
+        .contact-card-icon.linktree { background: linear-gradient(135deg, #43E660, #39D353); color: white; }
+        .contact-card-icon.chrome { background: linear-gradient(135deg, #4285F4, #34A853); color: white; }
+        .contact-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--gray-900);
+        }
+        .contact-card p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .contact-card .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-discord { background: #5865F2; color: white; }
+        .btn-discord:hover { background: #4752C4; transform: scale(1.05); }
+        .btn-tiktok { background: #000; color: white; }
+        .btn-tiktok:hover { background: #333; transform: scale(1.05); }
+        .btn-reddit { background: #FF4500; color: white; }
+        .btn-reddit:hover { background: #E03D00; transform: scale(1.05); }
+        .btn-linktree { background: #43E660; color: #000; }
+        .btn-linktree:hover { background: #39D353; transform: scale(1.05); }
+        .btn-chrome { background: #4285F4; color: white; }
+        .btn-chrome:hover { background: #3367D6; transform: scale(1.05); }
+
+        /* Agentes Section */
+        .agents-section {
+            background: var(--gray-50);
+            padding: 4rem 2rem;
+        }
+        .agents-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+        .agents-section > p {
+            text-align: center;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .agent-card {
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .agent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .agent-header {
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+        .agent-header.usfans { background: linear-gradient(135deg, #FF6B35, #FFB800); }
+        .agent-header.cnfans { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .agent-header.kakobuy { background: linear-gradient(135deg, #10B981, #059669); }
+        .agent-header h3 {
+            font-size: 1.75rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+        .agent-header .bonus {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .agent-body {
+            padding: 2rem;
+        }
+        .agent-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .agent-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-100);
+            color: var(--gray-700);
+        }
+        .agent-features li:last-child {
+            border-bottom: none;
+        }
+        .agent-features .check {
+            color: #10B981;
+            font-weight: bold;
+        }
+        .btn-agent {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-agent.usfans { background: linear-gradient(135deg, #FF6B35, #FFB800); color: white; }
+        .btn-agent.cnfans { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+        .btn-agent.kakobuy { background: linear-gradient(135deg, #10B981, #059669); color: white; }
+        .btn-agent:hover { transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            color: var(--gray-900);
+        }
+        .faq-item {
+            background: white;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+        .faq-answer p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-item"><span class="trust-icon">✓</span><span>9,375 Productos</span></div>
+            <div class="trust-item"><span class="trust-icon">⚡</span><span>Envio 7-15 dias</span></div>
+            <div class="trust-item"><span class="trust-icon">🔒</span><span>100% Seguro</span></div>
+            <div class="trust-item"><span class="trust-icon">⭐</span><span>4.8/5 Valoracion</span></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-premium">
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="index.html"><span style="font-weight:900;font-size:1.5rem;color:#FF6B35">LuxeEchoReplicas</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalog.html">Catalogo</a></li>
+                <li><a href="como-comprar.html">Como Comprar</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html" aria-current="page">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="contact-hero">
+        <h1>Contacta con Nosotros</h1>
+        <p>Unete a nuestra comunidad y recibe soporte personalizado. Estamos aqui para ayudarte en cada paso.</p>
+    </section>
+
+    <!-- Redes Sociales y Comunidad -->
+    <section class="contact-section">
+        <h2 style="text-align:center;font-size:2rem;font-weight:900;margin-bottom:2rem;color:var(--gray-900)">Unete a Nuestra Comunidad</h2>
+        <div class="contact-grid">
+            <!-- Discord -->
+            <div class="contact-card">
+                <div class="contact-card-icon discord">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.373-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                </div>
+                <h3>Discord</h3>
+                <p>Unete a nuestra comunidad activa. Comparte experiencias, resuelve dudas y conecta con otros compradores.</p>
+                <a href="https://discord.gg/PBkXDptF" target="_blank" rel="noopener" class="btn-contact btn-discord">
+                    Unirse al Discord
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <!-- TikTok -->
+            <div class="contact-card">
+                <div class="contact-card-icon tiktok">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </div>
+                <h3>TikTok</h3>
+                <p>Siguenos para ver reviews, unboxings y las ultimas novedades en replicas premium.</p>
+                <a href="https://www.tiktok.com/@usfans_1" target="_blank" rel="noopener" class="btn-contact btn-tiktok">
+                    Seguir en TikTok
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <!-- Reddit -->
+            <div class="contact-card">
+                <div class="contact-card-icon reddit">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701z"/></svg>
+                </div>
+                <h3>Reddit</h3>
+                <p>Participa en discusiones, comparte tus QC pics y aprende de la comunidad.</p>
+                <a href="https://www.reddit.com/r/t5_fn12pw/" target="_blank" rel="noopener" class="btn-contact btn-reddit">
+                    Ver en Reddit
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <!-- Linktree -->
+            <div class="contact-card">
+                <div class="contact-card-icon linktree">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066l-.038.001a.75.75 0 0 1-.712-.513l-1.218-3.655a.75.75 0 0 1 .474-.948l3.655-1.218a.75.75 0 0 1 .948.474l1.218 3.655a.75.75 0 0 1-.474.948l-3.655 1.218a.753.753 0 0 1-.198.038zm8.094 0a.753.753 0 0 1-.198-.038l-3.655-1.218a.75.75 0 0 1-.474-.948l1.218-3.655a.75.75 0 0 1 .948-.474l3.655 1.218a.75.75 0 0 1 .474.948l-1.218 3.655a.75.75 0 0 1-.75.512zM12 21.75a.75.75 0 0 1-.75-.75v-6a.75.75 0 0 1 1.5 0v6a.75.75 0 0 1-.75.75zM12 9a.75.75 0 0 1-.75-.75v-5.5a.75.75 0 0 1 1.5 0v5.5A.75.75 0 0 1 12 9z"/></svg>
+                </div>
+                <h3>Linktree</h3>
+                <p>Todos nuestros enlaces importantes en un solo lugar. Acceso rapido a todo.</p>
+                <a href="https://linktr.ee/Luxeechoreplicas" target="_blank" rel="noopener" class="btn-contact btn-linktree">
+                    Ver Linktree
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <!-- Extension Chrome -->
+            <div class="contact-card">
+                <div class="contact-card-icon chrome">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19.5a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zm0-12a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>
+                </div>
+                <h3>Extension Chrome</h3>
+                <p>Instala ChinaBuyHub para facilitar tus compras. Herramienta oficial de USFans.</p>
+                <a href="https://chromewebstore.google.com/detail/lkbdnacknmpmcojllhlekighhchhknfd" target="_blank" rel="noopener" class="btn-contact btn-chrome">
+                    Instalar Extension
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agentes de Compra -->
+    <section class="agents-section">
+        <h2>Agentes de Compra Recomendados</h2>
+        <p>Registrate en cualquiera de estos agentes verificados y obtiene bonos de bienvenida exclusivos.</p>
+        <div class="agents-grid">
+            <!-- USFans -->
+            <div class="agent-card">
+                <div class="agent-header usfans">
+                    <h3>USFans</h3>
+                    <span class="bonus">800EUR de Bienvenida</span>
+                </div>
+                <div class="agent-body">
+                    <ul class="agent-features">
+                        <li><span class="check">✓</span> El mas popular entre hispanohablantes</li>
+                        <li><span class="check">✓</span> Fotos QC de alta calidad</li>
+                        <li><span class="check">✓</span> Soporte en espanol</li>
+                        <li><span class="check">✓</span> Envio rapido 7-15 dias</li>
+                        <li><span class="check">✓</span> Extension Chrome oficial</li>
+                    </ul>
+                    <a href="https://www.usfans.com/register?ref=RCGD5Y" target="_blank" rel="noopener" class="btn-agent usfans">
+                        Registrarse en USFans
+                    </a>
+                </div>
+            </div>
+
+            <!-- CNFans -->
+            <div class="agent-card">
+                <div class="agent-header cnfans">
+                    <h3>CNFans</h3>
+                    <span class="bonus">Bono de Registro</span>
+                </div>
+                <div class="agent-body">
+                    <ul class="agent-features">
+                        <li><span class="check">✓</span> Alternativa confiable</li>
+                        <li><span class="check">✓</span> Buenos precios de envio</li>
+                        <li><span class="check">✓</span> Interfaz facil de usar</li>
+                        <li><span class="check">✓</span> Multiples metodos de pago</li>
+                        <li><span class="check">✓</span> Consolidacion de paquetes</li>
+                    </ul>
+                    <a href="https://cnfans.com/register/?ref=5267649" target="_blank" rel="noopener" class="btn-agent cnfans">
+                        Registrarse en CNFans
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kakobuy -->
+            <div class="agent-card">
+                <div class="agent-header kakobuy">
+                    <h3>Kakobuy</h3>
+                    <span class="bonus">Descuentos Exclusivos</span>
+                </div>
+                <div class="agent-body">
+                    <ul class="agent-features">
+                        <li><span class="check">✓</span> Precios competitivos</li>
+                        <li><span class="check">✓</span> Buena atencion al cliente</li>
+                        <li><span class="check">✓</span> Opciones de envio variadas</li>
+                        <li><span class="check">✓</span> Seguimiento detallado</li>
+                        <li><span class="check">✓</span> App movil disponible</li>
+                    </ul>
+                    <a href="https://ikako.vip/r/hc9hz" target="_blank" rel="noopener" class="btn-agent kakobuy">
+                        Registrarse en Kakobuy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <div class="faq-question">Como puedo contactar con soporte?</div>
+            <div class="faq-answer"><p>La forma mas rapida es unirte a nuestro Discord donde hay una comunidad activa y moderadores que pueden ayudarte. Tambien puedes contactarnos a traves de nuestro Linktree.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Cual agente de compra me recomiendan?</div>
+            <div class="faq-answer"><p>Recomendamos USFans para usuarios hispanohablantes por su soporte en espanol y el bono de 800EUR de bienvenida. CNFans y Kakobuy son excelentes alternativas con diferentes ventajas.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Cuanto tarda el envio?</div>
+            <div class="faq-answer"><p>El envio tipico tarda entre 7-15 dias dependiendo del metodo de envio que elijas y tu ubicacion. Todos los envios incluyen numero de seguimiento.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Es seguro comprar replicas?</div>
+            <div class="faq-answer"><p>Si, siempre que uses agentes verificados como los que recomendamos. Recibes fotos QC antes del envio para verificar la calidad. Miles de clientes compran cada mes sin problemas.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Que son las fotos QC?</div>
+            <div class="faq-answer"><p>QC significa Quality Control (Control de Calidad). Son fotos detalladas de tu producto especifico antes de que se envie. Puedes aprobar o rechazar el producto basandote en estas fotos.</p></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4 style="color:#FF6B35">LuxeEchoReplicas</h4>
+                <p class="footer-desc">Tu fuente confiable para replicas premium AAA+. Conectando clientes con los mejores productos desde China.</p>
+                <div class="social-links">
+                    <a href="https://linktr.ee/Luxeechoreplicas" target="_blank" rel="noopener" aria-label="Linktree"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066l-.038.001a.75.75 0 0 1-.712-.513l-1.218-3.655a.75.75 0 0 1 .474-.948l3.655-1.218a.75.75 0 0 1 .948.474l1.218 3.655a.75.75 0 0 1-.474.948l-3.655 1.218a.753.753 0 0 1-.198.038z"/></svg></a>
+                    <a href="https://discord.gg/PBkXDptF" target="_blank" rel="noopener" aria-label="Discord"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.373-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg></a>
+                    <a href="https://www.tiktok.com/@usfans_1" target="_blank" rel="noopener" aria-label="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
+                    <a href="https://www.reddit.com/r/t5_fn12pw/" target="_blank" rel="noopener" aria-label="Reddit"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="catalog.html">Catalogo</a></li>
+                    <li><a href="como-comprar.html">Como Comprar</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Agentes</h4>
+                <ul>
+                    <li><a href="https://www.usfans.com/register?ref=RCGD5Y" target="_blank">USFans</a></li>
+                    <li><a href="https://cnfans.com/register/?ref=5267649" target="_blank">CNFans</a></li>
+                    <li><a href="https://ikako.vip/r/hc9hz" target="_blank">Kakobuy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="legal.html">Terminos</a></li>
+                    <li><a href="legal.html#privacy">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LuxeEchoReplicas. Todos los derechos reservados.</p>
+            <p class="footer-disclaimer">Catalogo informativo. No vendemos directamente.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links')?.classList.toggle('active');
+        });
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
+        });
+    </script>
+</body>
+</html>
