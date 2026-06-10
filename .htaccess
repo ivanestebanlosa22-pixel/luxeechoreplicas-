@@ -1,0 +1,231 @@
+# ============================================================
+# LuxeEchoReplicas - Apache Configuration v2.0
+# SEO: HTTPS, WWW, 301 redirects, caching, security headers
+# Updated: 2026-05-20
+# ============================================================
+
+# ---------------------------------------------------------
+# COMPRESIÓN GZIP (con SVG y fuentes)
+# ---------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml font/ttf font/otf font/opentype font/woff font/woff2 application/font-woff application/font-woff2
+</IfModule>
+
+# ---------------------------------------------------------
+# CACHÉ DEL NAVEGADOR
+# ---------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# ---------------------------------------------------------
+# HEADERS DE SEGURIDAD
+# ---------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Header always set Content-Security-Policy "default-src 'self' https: 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https:; frame-src 'self' https:; connect-src 'self' https:; base-uri 'self'; form-action 'self' https:;"
+    <FilesMatch "\.(html|htm)$">
+        Header set X-Robots-Tag "index, follow"
+    </FilesMatch>
+    <FilesMatch "^api/">
+        Header set X-Robots-Tag "noindex, nofollow"
+    </FilesMatch>
+</IfModule>
+
+# ---------------------------------------------------------
+# MOTOR DE REESCRITURA
+# ---------------------------------------------------------
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# ==========================================
+# BLOQUE 0: REDIRECCIONES 301 ESPECÍFICAS
+# Corrigen URLs duplicadas y sin extensión .html
+# ==========================================
+
+# /index.html → / (evitar duplicado detectado en GSC)
+RewriteRule ^index\.html$ https://www.luxeechoreplicas.com/ [L,R=301]
+
+# /index → /
+RewriteRule ^index$ https://www.luxeechoreplicas.com/ [L,R=301]
+
+# /catalog → /catalog.html
+RewriteRule ^catalog$ https://www.luxeechoreplicas.com/catalog.html [L,R=301]
+
+# /how-to-buy → /how-to-buy.html
+RewriteRule ^how-to-buy$ https://www.luxeechoreplicas.com/how-to-buy.html [L,R=301]
+
+# /jordan-replicas → /jordan-replicas.html
+RewriteRule ^jordan-replicas$ https://www.luxeechoreplicas.com/jordan-replicas.html [L,R=301]
+
+# /nike-dunk-replicas → /nike-dunk-replicas.html
+RewriteRule ^nike-dunk-replicas$ https://www.luxeechoreplicas.com/nike-dunk-replicas.html [L,R=301]
+
+# /about → /about.html
+RewriteRule ^about$ https://www.luxeechoreplicas.com/about.html [L,R=301]
+
+# /contact → /contact.html
+RewriteRule ^contact$ https://www.luxeechoreplicas.com/contact.html [L,R=301]
+
+# /legal → /legal.html
+RewriteRule ^legal$ https://www.luxeechoreplicas.com/legal.html [L,R=301]
+
+# ==========================================
+# URLs antiguas inexistentes → 410 Gone
+# (eliminación rápida del índice de Google)
+# ==========================================
+RewriteRule ^litbuy-review$ - [G,L]
+RewriteRule ^litbuy-review\.html$ - [G,L]
+RewriteRule ^extension-privacy$ - [G,L]
+RewriteRule ^extension-privacy\.html$ - [G,L]
+
+# ==========================================
+# BLOQUE 1: CANONICALIZACIÓN DEL DOMINIO
+# Forzar HTTPS + WWW (una sola versión)
+# ==========================================
+
+# 1a. HTTP → HTTPS (tanto con www como sin www)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.luxeechoreplicas.com/$1 [L,R=301]
+
+# 1b. NON-WWW → WWW (ya en HTTPS)
+RewriteCond %{HTTP_HOST} !^www\.luxeechoreplicas\.com$ [NC]
+RewriteRule ^(.*)$ https://www.luxeechoreplicas.com/$1 [L,R=301]
+
+# ==========================================
+# BLOQUE 2: URLs INEXISTENTES → 410 Gone
+# Solo estas páginas existen. El resto: 410
+# ==========================================
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteCond %{REQUEST_URI} !^/catalog\.html$
+RewriteCond %{REQUEST_URI} !^/jordan-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/nike-dunk-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/how-to-buy\.html$
+RewriteCond %{REQUEST_URI} !^/about\.html$
+RewriteCond %{REQUEST_URI} !^/contact\.html$
+RewriteCond %{REQUEST_URI} !^/legal\.html$
+RewriteCond %{REQUEST_URI} !^/404\.html$
+RewriteCond %{REQUEST_URI} !^/robots\.txt$
+RewriteCond %{REQUEST_URI} !^/sitemap\.xml$
+RewriteCond %{REQUEST_URI} !^/llms\.txt$
+RewriteCond %{REQUEST_URI} !^/css/
+RewriteCond %{REQUEST_URI} !^/js/
+RewriteCond %{REQUEST_URI} !^/images/
+RewriteRule ^.*$ - [G,L]
+
+# ==========================================
+# BLOQUE 3: BLOQUEAR /api/, /admin/, /private/
+# ==========================================
+RewriteRule ^(api|admin|private)/.*$ - [G,L]
+
+# ==========================================
+# PÁGINA 404 PERSONALIZADA
+# ==========================================
+ErrorDocument 404 /404.html
+
+</IfModule>
+
+# ---------------------------------------------------------
+# PROTEGER ARCHIVOS SENSIBLES
+# ---------------------------------------------------------
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# ---------------------------------------------------------
+# PREVENIR HOTLINKING DE IMÁGENES
+# ---------------------------------------------------------
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?luxeechoreplicas\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?google\. [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?bing\. [NC]
+RewriteRule \.(jpg|jpeg|png|webp|svg)$ - [F,NC,L]
+</IfModule>
+
+# ---------------------------------------------------------
+# DEFAULT CHARSET
+# ---------------------------------------------------------
+AddDefaultCharset UTF-8
+
+# ---------------------------------------------------------
+# CDN / CLOUDFLARE COMPATIBILITY
+# ---------------------------------------------------------
+
+# Restore original visitor IP from Cloudflare
+<IfModule mod_remoteip.c>
+    RemoteIPHeader CF-Connecting-IP
+    RemoteIPTrustedProxy 173.245.48.0/20
+    RemoteIPTrustedProxy 103.21.244.0/22
+    RemoteIPTrustedProxy 103.22.200.0/22
+    RemoteIPTrustedProxy 103.31.4.0/22
+    RemoteIPTrustedProxy 141.101.64.0/18
+    RemoteIPTrustedProxy 108.162.192.0/18
+    RemoteIPTrustedProxy 190.93.240.0/20
+    RemoteIPTrustedProxy 188.114.96.0/20
+    RemoteIPTrustedProxy 197.234.240.0/22
+    RemoteIPTrustedProxy 198.41.128.0/17
+    RemoteIPTrustedProxy 162.158.0.0/15
+    RemoteIPTrustedProxy 104.16.0.0/13
+    RemoteIPTrustedProxy 104.24.0.0/14
+    RemoteIPTrustedProxy 172.64.0.0/13
+    RemoteIPTrustedProxy 131.0.72.0/22
+</IfModule>
+
+# Vary header for proper CDN caching with different encodings
+<IfModule mod_headers.c>
+    Header append Vary: Accept-Encoding
+
+    # HSTS: Tell Cloudflare to preload (already set above, reinforced for CDN)
+    Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" env=HTTPS
+
+    # Cross-Origin isolation for security
+    Header set Cross-Origin-Resource-Policy "same-origin"
+    Header set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+    Header set Cross-Origin-Embedder-Policy "unsafe-none"
+
+    # Cache-Control for static production assets
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(jpg|jpeg|png|webp|avif|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\.(woff|woff2|ttf|otf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Timing-Allow-Origin for performance monitoring
+    Header set Timing-Allow-Origin "*"
+</IfModule>
+
+# HTTP/2 Server Push (preload critical assets)
+<IfModule http2_module>
+    <FilesMatch "\.html$">
+        Header add Link "</css/elite-premium.css>; rel=preload; as=style"
+        Header add Link "</js/elite-app.js>; rel=preload; as=script"
+    </FilesMatch>
+</IfModule>

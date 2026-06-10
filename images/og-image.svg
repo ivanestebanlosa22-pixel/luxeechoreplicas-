@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#764ba2" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFB800" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B35"/><stop offset="33%" stop-color="#FFB800"/>
+      <stop offset="66%" stop-color="#764ba2"/><stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="cta" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB800"/><stop offset="100%" stop-color="#FF8A00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <g stroke="rgba(255,255,255,0.02)" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/><line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/><line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/><line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="60" y1="0" x2="60" y2="630"/><line x1="120" y1="0" x2="120" y2="630"/>
+    <line x1="180" y1="0" x2="180" y2="630"/><line x1="240" y1="0" x2="240" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/><line x1="360" y1="0" x2="360" y2="630"/>
+    <line x1="420" y1="0" x2="420" y2="630"/><line x1="480" y1="0" x2="480" y2="630"/>
+    <line x1="540" y1="0" x2="540" y2="630"/><line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="660" y1="0" x2="660" y2="630"/><line x1="720" y1="0" x2="720" y2="630"/>
+    <line x1="780" y1="0" x2="780" y2="630"/><line x1="840" y1="0" x2="840" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/><line x1="960" y1="0" x2="960" y2="630"/>
+    <line x1="1020" y1="0" x2="1020" y2="630"/><line x1="1080" y1="0" x2="1080" y2="630"/>
+    <line x1="1140" y1="0" x2="1140" y2="630"/>
+  </g>
+  <rect x="0" y="627" width="1200" height="3" fill="url(#line)"/>
+  <text x="80" y="120" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" fill="#f2f2f5">Luxeecho<tspan fill="#FF6B35">Replicas</tspan></text>
+  <text x="80" y="155" font-family="'Inter', Arial, sans-serif" font-size="13" font-weight="600" fill="#FF6B35" letter-spacing="2.4">YOUR TRUSTED GUIDE TO PREMIUM REPLICAS</text>
+  <text x="80" y="260" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="600" fill="#f2f2f5">
+    <tspan x="80" dy="0">Premium Replica Reviews &amp;</tspan>
+    <tspan x="80" dy="62">Trusted Shopping </tspan><tspan fill="#FFB800">Guides</tspan>
+  </text>
+  <text x="80" y="390" font-family="'Inter', Arial, sans-serif" font-size="20" fill="#9ca3af">Your reliable source for high-quality replicas, QC insights, and verified shopping agents.</text>
+
+  <text x="80" y="460" font-family="'Inter', Arial, sans-serif" font-size="18" fill="#FFB800" font-weight="800">5,513+</text>
+  <text x="168" y="460" font-family="'Inter', Arial, sans-serif" font-size="15" fill="#9ca3af">Verified Products</text>
+  <text x="350" y="460" font-family="'Inter', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.1)">|</text>
+  <text x="380" y="460" font-family="'Inter', Arial, sans-serif" font-size="18" fill="#FFB800" font-weight="800">4.8/5</text>
+  <text x="460" y="460" font-family="'Inter', Arial, sans-serif" font-size="15" fill="#9ca3af">Community Rating</text>
+  <text x="650" y="460" font-family="'Inter', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.1)">|</text>
+  <text x="680" y="460" font-family="'Inter', Arial, sans-serif" font-size="18" fill="#FFB800" font-weight="800">7-15</text>
+  <text x="740" y="460" font-family="'Inter', Arial, sans-serif" font-size="15" fill="#9ca3af">Days Shipping</text>
+
+  <rect x="80" y="518" width="230" height="48" rx="24" fill="url(#cta)"/>
+  <text x="195" y="548" font-family="'Inter', Arial, sans-serif" font-size="16" font-weight="800" fill="#0a0a0f" text-anchor="middle">Explore Reviews →</text>
+</svg>
