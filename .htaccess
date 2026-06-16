@@ -120,6 +120,12 @@ RewriteCond %{REQUEST_URI} !^/index\.html$
 RewriteCond %{REQUEST_URI} !^/catalog\.html$
 RewriteCond %{REQUEST_URI} !^/jordan-replicas\.html$
 RewriteCond %{REQUEST_URI} !^/nike-dunk-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/yeezy-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/replica-watches\.html$
+RewriteCond %{REQUEST_URI} !^/replica-bags\.html$
+RewriteCond %{REQUEST_URI} !^/kakobuy\.html$
+RewriteCond %{REQUEST_URI} !^/usfans\.html$
+RewriteCond %{REQUEST_URI} !^/litbuy\.html$
 RewriteCond %{REQUEST_URI} !^/how-to-buy\.html$
 RewriteCond %{REQUEST_URI} !^/about\.html$
 RewriteCond %{REQUEST_URI} !^/contact\.html$
@@ -128,6 +134,7 @@ RewriteCond %{REQUEST_URI} !^/404\.html$
 RewriteCond %{REQUEST_URI} !^/robots\.txt$
 RewriteCond %{REQUEST_URI} !^/sitemap\.xml$
 RewriteCond %{REQUEST_URI} !^/llms\.txt$
+RewriteCond %{REQUEST_URI} !^/llms-full\.txt$
 RewriteCond %{REQUEST_URI} !^/css/
 RewriteCond %{REQUEST_URI} !^/js/
 RewriteCond %{REQUEST_URI} !^/images/
