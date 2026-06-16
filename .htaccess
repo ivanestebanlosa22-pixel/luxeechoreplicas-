@@ -126,6 +126,13 @@ RewriteCond %{REQUEST_URI} !^/replica-bags\.html$
 RewriteCond %{REQUEST_URI} !^/kakobuy\.html$
 RewriteCond %{REQUEST_URI} !^/usfans\.html$
 RewriteCond %{REQUEST_URI} !^/litbuy\.html$
+RewriteCond %{REQUEST_URI} !^/jordan\-1\-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/jordan\-4\-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/air\-force\-1\-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/new\-balance\-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/travis\-scott\-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/yeezy\-350\-replicas\.html$
+RewriteCond %{REQUEST_URI} !^/yeezy\-slides\-replicas\.html$
 RewriteCond %{REQUEST_URI} !^/how-to-buy\.html$
 RewriteCond %{REQUEST_URI} !^/about\.html$
 RewriteCond %{REQUEST_URI} !^/contact\.html$
