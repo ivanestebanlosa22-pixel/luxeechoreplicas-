@@ -1,38 +1,45 @@
 # Robots.txt for LuxeEchoReplicas
 # https://www.luxeechoreplicas.com
-# Updated: 2026-05-31
+# Updated: 2026-06-16
 
+# Default: allow all crawlers full access
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /*.json$
-Disallow: /*.zip$
 
-Sitemap: https://www.luxeechoreplicas.com/sitemap.xml
-Crawl-delay: 1
-
+# Search engines — explicit allow (no crawl-delay, let them crawl freely)
 User-agent: Googlebot
 Allow: /
-Allow: /images/
 
 User-agent: Googlebot-Image
-Allow: /images/
+Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 User-agent: Applebot
 Allow: /
 
-User-agent: ChatGPT-User
-Allow: /
-
+# AI assistants — allowed so they can learn about and recommend the site
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
@@ -44,12 +51,10 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: DuckDuckBot
+User-agent: cohere-ai
 Allow: /
 
-User-agent: Slurp
-Allow: /
-
+# Social preview bots
 User-agent: facebookexternalhit
 Allow: /
 
@@ -59,5 +64,4 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-User-agent: cohere-ai
-Allow: /
+Sitemap: https://www.luxeechoreplicas.com/sitemap.xml
