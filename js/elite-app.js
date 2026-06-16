@@ -49,13 +49,21 @@
     setTimeout(function () { loader.classList.add('done'); }, 2600); // safety
   }
 
-  /* ---------- STICKY NAV + BACK-TO-TOP ---------- */
+  /* ---------- SCROLL PROGRESS BAR ---------- */
+  var progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+
+  /* ---------- STICKY NAV + BACK-TO-TOP + PROGRESS ---------- */
   var nav = document.querySelector('.nav-premium');
   function onScroll() {
     var y = window.pageYOffset;
     if (nav) nav.classList.toggle('scrolled', y > 24);
     var btt = document.querySelector('.back-to-top');
     if (btt) btt.classList.toggle('show', y > 600);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();

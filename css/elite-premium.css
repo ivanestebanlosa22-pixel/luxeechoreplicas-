@@ -478,6 +478,39 @@ table.comparison-table td:first-child { color:var(--text-secondary); }
 .toc a { color:var(--volt); }
 .toc a:hover { text-decoration:underline; }
 
+/* ============================================================
+   PREMIUM FX LAYER (global motion + glow)
+   ============================================================ */
+
+/* scroll progress bar (injected by JS) */
+.scroll-progress { position:fixed; top:0; left:0; height:3px; width:0; z-index:2000; background:linear-gradient(90deg, var(--volt), #8ffff0); box-shadow:0 0 14px var(--volt-glow); transition:width .08s linear; }
+
+/* animated shimmer on highlighted headline words */
+@supports ((-webkit-background-clip:text) or (background-clip:text)) {
+  .hero-title .volt, .gradient-text {
+    background:linear-gradient(100deg, var(--volt) 0%, #b6fff4 50%, var(--volt) 100%);
+    background-size:200% auto; -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; color:transparent; animation:shimmer 6s linear infinite;
+  }
+}
+@keyframes shimmer { to { background-position:200% center; } }
+
+/* richer cyan glow on hover for all card types */
+.card:hover, .feature-card:hover, .product-card:hover, .agent-card:hover, .review-card:hover {
+  box-shadow:0 22px 54px rgba(0,0,0,0.55), 0 0 0 1px rgba(0,224,198,0.22), 0 10px 44px rgba(0,224,198,0.12);
+}
+
+/* subtle pulsing glow on primary CTAs */
+.btn-cta { animation:ctaPulse 3.2s ease-in-out infinite; }
+.btn-cta:hover { animation:none; }
+@keyframes ctaPulse { 0%,100% { box-shadow:0 10px 40px rgba(0,224,198,0.18); } 50% { box-shadow:0 10px 46px rgba(0,224,198,0.36); } }
+
+/* nav logo + section labels get a soft glow */
+.nav-logo span, .section-label { text-shadow:0 0 18px rgba(0,224,198,0.35); }
+
+/* badge gentle glow */
+.badge { box-shadow:0 0 22px rgba(0,224,198,0.12); }
+
 /* ─── REDUCED MOTION ─── */
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
